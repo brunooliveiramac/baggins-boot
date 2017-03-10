@@ -8,6 +8,11 @@ module.exports = function(app){
 		const VALIDATION_TOKEN = (process.env.MESSENGER_VALIDATION_TOKEN) ?
 		(process.env.MESSENGER_VALIDATION_TOKEN) :
 		config.get('validationToken');
+ 
+		// Generate a page access token for your page from the App Dashboard
+		const PAGE_ACCESS_TOKEN = (process.env.MESSENGER_PAGE_ACCESS_TOKEN) ?
+		(process.env.MESSENGER_PAGE_ACCESS_TOKEN) :
+		config.get('pageAccessToken');
 
         app.get('/boot', function(req, res){
 
