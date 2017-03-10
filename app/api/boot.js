@@ -1,4 +1,6 @@
-const config = require('config'); 
+const config = require('config'),
+  	  request = require('request');
+
 
 module.exports = function(app){
 
@@ -56,10 +58,6 @@ module.exports = function(app){
 		  }
 		});
 		  
-		function receivedMessage(event) {
-		  // Putting a stub for now, we'll expand it in the following steps
-		  console.log("Message data: ", event.message);
-		}
 
 		function receivedMessage(event) {
 		  var senderID = event.sender.id;
