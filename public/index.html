@@ -1,0 +1,75 @@
+<html ng-app="baggins-boot">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
+	<link rel="stylesheet" href="http://remotty.github.io/angular-ladda/bower_components/ladda/dist/ladda-themeless.min.css">
+	<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+</head>
+<body id="myPage" data-spy="scroll" data-offset="60">
+
+	<div class="jumbotron text-center" ng-controller="HomeController as homeController" ng-cloack>
+		<h3>Baggins BooT</h3>
+		<blockquote> 
+			<p > {{quote.quote}}</p> 
+			<footer >{{quote.author}}</footer>
+		</blockquote>
+		<div class="form">
+				<div class="fb-messengermessageus" 
+                  messenger_app_id="1475940702418616" 
+                  page_id="280225375746512"
+                  color="white"
+                  size="large" >
+                </div>   
+		</div>
+	</div>
+
+	<footer>
+		<h4>Privacy</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ipsum libero, </p>
+		<p>By bruno_oliveira.</p>
+		<p>
+			<a href="https://github.com/brunooliveiramac/" target='_blank'>
+				<i class="fa fa-github fa-fw"></i>
+			</a>
+			<a href="https://www.linkedin.com/in/bruno-oliveira-19b918b2/" target='_blank'>
+				<i class="fa fa-linkedin"></i>
+			</a>
+		</p>
+		<br />
+		<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ipsum libero</i></p>	
+
+	</footer>
+
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="http://remotty.github.io/angular-ladda/bower_components/ladda/dist/spin.min.js"></script>
+	<script src="http://remotty.github.io/angular-ladda/bower_components/ladda/dist/ladda.min.js"></script>
+	<script src="http://remotty.github.io/angular-ladda/bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
+	<script src="js/lib/angular-animate.min.js"></script>
+	<script src="js/lib/angular-route.min.js"></script>
+	<script src="js/lib/angular-resource.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/controller/home-controller.js"></script>
+	<script src="js/controller/privacy-controller.js"></script>
+	<script>
+	window.fbAsyncInit = function() {
+	FB.init({
+	appId      : '1475940702418616',
+	xfbml      : true,
+	version    : 'v2.8'
+	});
+	FB.AppEvents.logPageView();
+	};
+
+	(function(d, s, id){
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+</body>
+</html>
